@@ -8,6 +8,7 @@ const Home = () => {
   const clientCount = useRef(null);
   const projectCount = useRef(null);
 
+  
   const animationClientsCount = () => {
     animate(0, 100, {
       duration: 1,
