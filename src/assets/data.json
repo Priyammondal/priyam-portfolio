@@ -37,5 +37,20 @@
       "url": "/",
       "imgSrc": "https://cdn.pixabay.com/photo/2020/03/19/21/25/cactus-4948833_960_720.jpg"
     }
+  ],
+
+  "experiences": [
+    {
+      "date": "24/03/2021 - 12/10/2021",
+      "title": "PwC"
+    },
+    {
+      "date": "20/10/2021 - 30/04/2022",
+      "title": "BDIPlus"
+    },
+    {
+      "date": "01/05/2022- Present",
+      "title": "Freelance"
+    }
   ]
 }

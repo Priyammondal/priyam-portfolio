@@ -4,11 +4,10 @@ import Typewriter from "typewriter-effect";
 import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
 import me from "../assets/me.png";
 
-const Home = () => {
+const Home = ({ ratio }) => {
   const clientCount = useRef(null);
   const projectCount = useRef(null);
 
-  
   const animationClientsCount = () => {
     animate(0, 100, {
       duration: 1,
@@ -74,10 +73,12 @@ const Home = () => {
           <article>
             <p>
               +
-              <motion.span
-                whileInView={animationClientsCount}
-                ref={clientCount}
-              ></motion.span>
+              {ratio < 2 && (
+                <motion.span
+                  whileInView={animationClientsCount}
+                  ref={clientCount}
+                ></motion.span>
+              )}
             </p>
             <span>Clients Worldwide</span>
           </article>
@@ -86,10 +87,12 @@ const Home = () => {
             <article>
               <p>
                 +
-                <motion.span
-                  ref={projectCount}
-                  whileInView={animationProjectsCount}
-                ></motion.span>
+                {ratio < 2 && (
+                  <motion.span
+                    ref={projectCount}
+                    whileInView={animationProjectsCount}
+                  ></motion.span>
+                )}
               </p>
               <span>Projects Done</span>
             </article>
