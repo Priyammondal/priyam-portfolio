@@ -23,11 +23,28 @@ const App = () => {
     };
   }, [ratio]);
 
-  return ratio < 2 ? (
-    <>
+  // return ratio < 2 ? (
+  //   <>
+  //     <HeaderPhone menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+  //     <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+  //     <Home ratio={ratio}/>
+  //     <Work />
+  //     <TimeLine />
+  //     <Services />
+  //     <Testimonial />
+  //     <Contact />
+  //     <Footer />
+  //     <Toaster />
+  //   </>
+  // ) : (
+  //   <em id="customMessage"> Please Change the ratio to View!</em>
+  // );
+  console.log(menuOpen);
+  return (
+    <div>
       <HeaderPhone menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <Home ratio={ratio}/>
+      <Home ratio={ratio} />
       <Work />
       <TimeLine />
       <Services />
@@ -35,9 +52,7 @@ const App = () => {
       <Contact />
       <Footer />
       <Toaster />
-    </>
-  ) : (
-    <em id="customMessage"> Please Change the ratio to View!</em>
+    </div>
   );
 };
 

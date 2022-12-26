@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Header = ({ setMenuOpen, menuOpen }) => {
   return (
@@ -19,7 +19,7 @@ export const HeaderPhone = ({ menuOpen, setMenuOpen }) => {
     <div className={`navPhone ${menuOpen ? "navPhoneComes" : ""}`}>
       <NavContent setMenuOpen={setMenuOpen} />
       <button onClick={() => setMenuOpen(!menuOpen)}>
-        <AiOutlineMenu />
+        <AiOutlineClose />
       </button>
     </div>
   );
