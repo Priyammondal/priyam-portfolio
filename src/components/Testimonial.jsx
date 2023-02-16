@@ -31,8 +31,8 @@ const Testimonial = () => {
 const TestimonialCard = ({ name, feedback, img }) => (
   <article>
     <img src={img} alt="user" />
-    <h4>{name}</h4>
-    <p>{feedback}</p>
+      <h4>{name}</h4>
+      <p>{feedback}</p>
   </article>
 );
 

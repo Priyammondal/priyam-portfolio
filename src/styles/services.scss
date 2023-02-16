@@ -1,7 +1,7 @@
 #services {
   width: 100%;
   height: 100vh;
-  padding: $p;
+  padding: 5rem $p !important;
   background-color: $color5;
   color: $color4;
   overflow: hidden;
@@ -14,7 +14,7 @@
   }
   > section {
     display: grid;
-    margin: 3rem;
+    padding: 3rem;
     grid-template-columns: repeat(3, 1fr);
     height: 100%;
     gap: 2rem;
@@ -26,11 +26,14 @@
       color: $color6;
       display: flex;
       flex-direction: column;
-      transition: all 0.3s;
+      transition: all 0.2s ease-in-out;
       align-items: center;
       justify-content: center;
       &:hover {
-        box-shadow: 0 0 5px 15px $color1;
+        // box-shadow: 0 0 5px 15px $color1;
+        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px,
+          rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px,
+          rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
       }
       > svg {
         color: $color5;
@@ -44,7 +47,7 @@
     }
 
     .serviceBox1 {
-    //   grid-column: 1/2;
+      //   grid-column: 1/2;
       grid-row: 1/3;
       background-color: $color1;
       > h3 {

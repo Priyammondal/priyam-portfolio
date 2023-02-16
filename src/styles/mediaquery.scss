@@ -16,8 +16,8 @@
   }
 
   #work {
-    padding: 8rem $p_md;
-    height: 110vh;
+    // padding: 8rem $p_md;
+    // height: 110vh;
     > section {
       > article {
         height: 20rem;
@@ -25,14 +25,11 @@
       }
       .workItem {
         //   padding: 2rem;
-        height: 20rem;
+        height: 40rem;
         > aside {
           > p {
             margin: 1rem;
           }
-          // > a {
-          //   margin: 1rem;
-          // }
         }
       }
     }
@@ -60,7 +57,7 @@
   }
 
   footer {
-    padding-left: $p_md;
+    // padding-left: $p_md;
   }
 }
 
@@ -75,8 +72,22 @@
       &:first-of-type {
         padding-left: $p_base;
         > div {
+          padding-top: 1rem;
           > h1 {
-            font: 900 3rem $text1;
+            font: 900 2.5rem $text1;
+          }
+          .typewriterpara {
+            margin: 5px 0;
+          }
+          > div {
+            a {
+              &:first-of-type {
+                padding: 0.7rem 2.2rem;
+              }
+              &:last-of-type {
+                padding: 0.7rem 1.2rem;
+              }
+            }
           }
 
           aside {
@@ -88,7 +99,53 @@
   }
 
   #work {
-    padding: 8rem $p_base;
+    // padding: 5rem $p_base !important;
+    > section {
+      > div {
+        width: 100%;
+        .workItem {
+          overflow-y: auto;
+          height: 30rem;
+          width: 70%;
+          margin: auto;
+          display: flex;
+          align-items: center;
+          color: $color1;
+          // margin-bottom: 2rem;
+
+          > img {
+            border-radius: 20px;
+            width: 40%;
+            height: 50%;
+            object-fit: cover;
+          }
+
+          > aside {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            > p {
+              letter-spacing: 3px;
+              line-height: 150%;
+              margin: 2rem;
+            }
+            > a {
+              background-color: $color3;
+              padding: 0.7rem 1rem;
+              // margin: 2rem;
+              color: $color4;
+              transition: all 0.5s;
+              &:hover {
+                background-color: $color3_1;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   #services {
@@ -113,12 +170,26 @@
       &:first-of-type {
         padding-left: $p_sm;
         > div {
+          > h1 {
+            font: 900 2.3rem $text1;
+          }
           > div {
             gap: 2rem;
             width: 100%;
           }
+          article {
+            width: 35%;
+            > p {
+              font: 900 1.5rem $text1;
+            }
+            > span {
+              font: 500 1rem $text2;
+            }
+          }
           aside {
-            flex-direction: column;
+            article[data-special] {
+              width: 65%;
+            }
           }
         }
       }
@@ -126,23 +197,30 @@
   }
 
   #work {
-    padding: 8rem $p_zero;
+    // padding: 5rem $p_zero !important;
     > section {
-      > article {
-        height: 25rem;
-      }
-      .workItem {
-        height: 25rem;
+      > div {
+        width: 100%;
+        .workItem {
+          height: 40rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // background-color: red;
+          > img {
+            // width: 40%;
+          }
+        }
       }
     }
   }
 
-  #services {
-    padding: $p_sm_inverse;
-    height: 90vh;
-  }
+  // #services {
+  //   padding: $p_sm_inverse ;
+  //   // height: 90vh;
+  // }
   #testimonial {
-    padding: $p_zero;
+    padding: 2rem 0 !important;
     > h2 {
       padding: 3rem;
       margin-bottom: 0%;
@@ -170,9 +248,15 @@
   }
 
   footer {
-    padding-left: $p_zero;
-    grid-template-columns: 1fr;
+    // padding-left: $p_zero;
+    padding: 2rem 0;
+    flex-direction: column;
+    > section {
+      padding: 1rem 0;
+      order: 3;
+    }
     > div {
+      order: 1;
       width: 100%;
       border: none;
       p {
@@ -180,8 +264,11 @@
         margin: 2rem auto;
       }
     }
+    > aside {
+      order: 2;
+    }
     > a {
-      margin: 1rem;
+      // margin: 1rem;
     }
   }
 }
@@ -195,6 +282,74 @@
   }
   .navBtn {
     display: block;
+  }
+  #home {
+    height: 90vh;
+    > section {
+      &:first-of-type {
+        > div {
+          padding-top: 1.5rem;
+          > div {
+            gap: 2rem;
+            width: 100%;
+            a {
+              font-size: 0.8rem;
+            }
+          }
+          article {
+            width: 35%;
+            > p {
+              font: 900 1.5rem $text1;
+            }
+            > span {
+              font: 500 0.8rem $text2;
+            }
+          }
+          aside {
+            > article {
+              margin: 0 0;
+              padding: 1rem 0;
+            }
+          }
+        }
+      }
+      // &:last-of-type{
+      //   justify-content: flex-end;
+      // }
+    }
+  }
+
+  #work {
+    // padding: 5rem 0 !important;
+    > section {
+      // padding: 8rem;
+      > div {
+        width: 100%;
+        .workItem {
+          height: 40rem;
+          justify-content: center;
+          // background-color: red;
+          > img {
+            width: 40%;
+            height: 45%;
+          }
+          > aside {
+            > p {
+              letter-spacing: 2px;
+              line-height: 150%;
+              margin: 1rem;
+            }
+            > a {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  #services {
+    padding: $p_sm_inverse !important;
+    // height: 90vh;
   }
 }
 
@@ -213,14 +368,26 @@
         > div {
           border: none;
           padding-top: 3rem;
+          width: 100%;
           > h1 {
             font: 900 2.5rem $text1;
           }
           > div {
             flex-direction: column;
+            a {
+              font-size: 1rem;
+              &:first-of-type {
+                padding: 1rem 2.5rem;
+              }
+              &:last-of-type {
+                padding: 1rem 1.2rem;
+              }
+            }
           }
           aside {
             align-items: center;
+            flex-direction: column;
+            width: 100%;
           }
 
           article[data-special] {
@@ -230,14 +397,21 @@
             align-items: center;
             > span {
               display: block;
-              width: 70%;
+              width: 100% !important;
               word-wrap: break-word;
+              text-align: center;
             }
           }
 
           article {
             width: 100%;
             text-align: center;
+            > p {
+              font: 900 2rem $text1;
+            }
+            > span {
+              font: 500 1rem $text2;
+            }
             &::after {
               top: 0;
               left: 0%;
@@ -248,6 +422,10 @@
 
       &:last-of-type {
         border: none;
+        > img {
+          width: 40vmax;
+          height: 40vmax;
+        }
       }
     }
 
@@ -259,40 +437,44 @@
 
   #work {
     > section {
-      > article {
+      > div {
         width: 100%;
-        height: 30vmax;
-      }
-      .workItem {
-        height: 30vmax;
-        //   box-shadow: 0 0 5px $color1;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        > img {
-          height: 40%;
-          width: 30%;
+        > article {
+          width: 100%;
+          // height: 100% !important;
         }
-        > aside {
-          padding: 1rem;
-          > h3 {
-            margin: 1rem;
-          }
-
-          > p {
-            letter-spacing: 0;
-            line-height: unset;
-            margin: 0%;
-            font-size: 0.75rem;
+        .workItem {
+          // height: 100vh !important;
+          flex-direction: column;
+          height: 100%;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          // margin-bottom: 4rem;
+          > img {
             width: 50%;
+            height: 40%;
           }
+          > aside {
+            > h3 {
+              margin: 0 0 1rem 0;
+              font-size: 1.5rem;
+              padding: 0
+            }
 
-          > a {
-            padding: 0.4rem 0.7rem;
-            font-size: 0.7rem;
-            margin: 1rem;
+            > p {
+              letter-spacing: 0;
+              line-height: unset;
+              margin: 0%;
+              font-size: 1rem;
+              // width: 50%;
+            }
+
+            > a {
+              padding: 0.5rem 1rem;
+              font-size: 0.8rem;
+              margin: 1rem;
+            }
           }
         }
       }
@@ -322,10 +504,22 @@
   }
 
   #services {
+    width: 100vw !important;
+    padding: 5rem 0 !important;
+    align-items: center;
     > section {
-      margin: 3rem 0;
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
+      > * {
+        > svg {
+          font-size: 2rem;
+        }
+        > span {
+          font: 700 1rem $text2;
+          letter-spacing: 2px;
+          margin: 0rem;
+        }
+      }
       .serviceBox1 {
         grid-column: 1/3;
         grid-row: unset;

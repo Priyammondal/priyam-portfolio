@@ -3,6 +3,7 @@ import { animate, motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
 import me from "../assets/me.png";
+import resume from "../assets/Resume.pdf";
 
 const Home = ({ ratio }) => {
   const clientCount = useRef(null);
@@ -16,7 +17,7 @@ const Home = ({ ratio }) => {
   };
 
   const animationProjectsCount = () => {
-    animate(0, 500, {
+    animate(0, 100, {
       duration: 1,
       onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
     });
@@ -55,7 +56,7 @@ const Home = ({ ratio }) => {
 
           <Typewriter
             options={{
-              strings: ["A Developer", "A Designer", "A Creator"],
+              strings: ["A FullStack Developer", "A Designer", "A Creator"],
               autoStart: true,
               loop: true,
               wrapperClassName: "typewriterpara",
@@ -65,12 +66,10 @@ const Home = ({ ratio }) => {
 
           <div>
             <a href="mailto:priyammondal096@gmail.com">Hire Me</a>
-            <a href="#work">
-              Projects <BsArrowUpRight />
-            </a>
+            <a href={resume} download>Download CV</a>
           </div>
 
-          <article>
+          {/* <article>
             <p>
               +
               <motion.span
@@ -79,7 +78,7 @@ const Home = ({ ratio }) => {
               ></motion.span>
             </p>
             <span>Clients Worldwide</span>
-          </article>
+          </article> */}
 
           <aside>
             <article>

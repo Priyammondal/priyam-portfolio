@@ -1,6 +1,7 @@
 import React from "react";
 import { delay, motion } from "framer-motion";
-import { AiFillIeCircle, AiFillAndroid, AiFillWindows } from "react-icons/ai";
+import { AiFillIeCircle, AiFillDatabase } from "react-icons/ai";
+import { FiFigma } from "react-icons/fi";
 
 const Services = () => {
   const animations = {
@@ -49,16 +50,16 @@ const Services = () => {
           initial={animations.twoAndThree}
           transition={{ delay: 0.2 }}
         >
-          <AiFillAndroid />
-          <span>App Development</span>
+          <AiFillDatabase />
+          <span>Database</span>
         </motion.div>
         <motion.div
           className="serviceBox4"
           whileInView={animations.whileInView}
           initial={animations.four}
         >
-          <AiFillWindows />
-          <span>Desktop Development</span>
+          <FiFigma />
+          <span>Web Design</span>
         </motion.div>
       </section>
     </div>

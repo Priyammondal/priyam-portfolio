@@ -17,14 +17,19 @@
   font-family: $text2;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  // width: 100%;
 }
+html,
+body {
+  // width: 100vw;
+  // height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  // background-color: $color1;
+}
+
 a {
   text-decoration: none;
-}
-body {
-  background-color: $color1;
-  overflow-x: hidden;
 }
 .disableBtn {
   background-color: rgb(190, 190, 190) !important;

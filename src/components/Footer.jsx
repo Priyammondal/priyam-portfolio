@@ -13,15 +13,21 @@ import {
 const Footer = () => {
   return (
     <footer>
+      <section>
+        <h3>Made with 🧡 and React</h3>
+        <h5>© {new Date().getFullYear()} Priyam Mondal</h5>
+      </section>
+
       <div>
         <img src={pm} alt="Priyam" />
         <h2>Priyam Mondal</h2>
         <p>I have stood on a mountain of no’s for one yes.</p>
       </div>
+      
       <aside>
         <h2>Social Media</h2>
         <article>
-          <a href="https://www.instagram.com/priyam.jsx/" target={"blank"}>
+          <a href="https://www.instagram.com/thepriyammondal/" target={"blank"}>
             <AiFillInstagram />
           </a>
           <a href="https://www.linkedin.com/in/priyam-mondal/" target={"blank"}>
@@ -36,7 +42,7 @@ const Footer = () => {
           <a href="https://github.com/Priyammondal" target={"blank"}>
             <AiFillGithub />
           </a>
-          <a href="https://leetcode.com/priyam_jsx/" target={"blank"}>
+          <a href="https://leetcode.com/priyam_mondal/" target={"blank"}>
             <AiFillCode />
           </a>
           <a href="https://twitter.com/priyam_jsx" target={"blank"}>
@@ -44,6 +50,7 @@ const Footer = () => {
           </a>
         </article>
       </aside>
+
       <a href="#home">
         <AiOutlineArrowUp />
       </a>

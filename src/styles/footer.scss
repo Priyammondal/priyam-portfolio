@@ -1,15 +1,21 @@
 footer {
+  position: relative;
   min-height: 100px;
   background-color: $color6;
   color: $color4;
-  padding: 6rem 0;
-  padding-left: $p;
-  display: grid;
-  grid-template-columns: 10fr 3fr 1fr;
+  padding: 3rem 0 3rem 0;
+  // padding-left: $p;
+  display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
   text-align: center;
+  > section {
+    width: 100%;
+    flex: 1; 
+    // padding: 1rem;
+  }
   > div {
+    flex: 3;
     width: 100%;
     border-left: 2px solid $color4;
     border-right: 2px solid $color4;
@@ -28,12 +34,13 @@ footer {
   }
 
   > aside {
+    flex: 1;
     > article {
       margin-top: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
+      gap: 0.5rem;
       > a > svg {
         font-size: 2rem;
         color: $color4;
@@ -45,15 +52,18 @@ footer {
   }
 
   > a {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: $color4;
     border-radius: 50%;
     display: grid;
     place-items: center;
     transition: all 0.3s;
+    animation: upanddown 1s infinite linear alternate;
+    position: absolute;
+    bottom: 5px;
     svg {
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: $color3;
       &:hover {
         color: $color3_1;
